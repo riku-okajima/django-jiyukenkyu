@@ -1,0 +1,47 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="list-container">
+  <a href="{% url 'app:list' %}" class="btn btn-secondary btn-sm back-btn">
+    <i class="fas fa-undo"></i>
+    {{back_btn}}
+  </a>
+  <h4 class="mt-4 border-bottom">
+    {{delete_title}}
+  </h4>
+  <form action="" method="POST">
+  {% csrf_token %}
+  <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">{{presented_at_label}}</th>
+          <th scope="col">{{presenter_label}}</th>
+          <th scope="col">{{category_label}}</th>
+          <th scope="col">{{theme_label}}</th>
+          <th scope="col">{{status_label}}</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ object.presented_at }}</td>
+          <td>{{ object.presenter }}</td>
+          <td>{{ object.get_category_display }}</td>
+          <td>{{ object.theme }}</td>
+          <td>
+            {% if object.is_presented %}
+              {{after_presentation}}
+            {% else %}
+              {{before_presentation}}
+            {% endif %}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="del-btn-wrap">
+      <button type="submit"  class="btn btn-danger delete-btn">
+        <i class="fas fa-trash-alt"></i>
+        {{delete_btn}}
+      </button>
+    </div>
+  </form>
+</div>
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="list-container">
+  <h4 class="mt-4 border-bottom">
+    {{list_title}}
+  </h4>
+  <div class="obj-count">{{count}}</div>
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th scope="col">{{presented_at_label}}</th>
+          <th scope="col">{{presenter_label}}</th>
+          <th scope="col">{{category_label}}</th>
+          <th scope="col">{{theme_label}}</th>
+          <th scope="col">{{status_label}}</th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for obj in object_list %}
+        <tr>
+          <td>{{ obj.presented_at }}</td>
+          <td>{{ obj.presenter }}</td>
+          <td>{{ obj.get_category_display }}</td>
+          <td>{{ obj.theme }}</td>
+          <td>
+            {% if obj.is_presented %}
+              <div class="after_presentation">
+                {{after_presentation}}
+              </div>
+            {% else %}
+              <div class="before_presentation">
+                {{before_presentation}}
+              </div>
+            {% endif %}
+          </td>
+          <td class="event-cell">
+            <a href="{% url 'app:detail' obj.id %}" class="btn btn-outline-info btn-sm">
+              <i class="fas fa-file-alt"></i>
+              {{detail_btn}}
+            </a>
+            <a href="{% url 'app:update' obj.id %}" class="btn btn-outline-success btn-sm">
+              <i class="fas fa-edit"></i>
+              {{modify_btn}}
+            </a>
+            <a href="{% url 'app:delete' obj.id %}" class="btn btn-outline-danger btn-sm">
+              <i class="fas fa-trash-alt"></i>
+              {{delete_btn}}
+            </a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <div class="inner-bottom">
+      <a href="{% url 'app:create' %}" class="btn btn-primary btn-sm my-3 create-btn">
+        <i class="fas fa-plus"></i>
+        {{add_btn}}
+      </a>
+    </div>
+</div>
+{% endblock %}

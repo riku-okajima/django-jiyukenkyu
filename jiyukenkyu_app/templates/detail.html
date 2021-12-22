@@ -1,0 +1,56 @@
+{% extends 'common.html' %}
+{% block content %}
+<div class="detail container">
+    <div class="link-wrap">
+        <a href="{% url 'app:update' object.id %}" class="btn btn-outline-success btn-sm"><i class="fas fa-edit"></i>{{modify_btn}}</a>
+        <a href="{% url 'app:delete' object.id %}" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i>{{delete_btn}}</a>
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{presented_at_label}}
+    </h4>
+    <div class="detail-value">
+        {{object.presented_at}}
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{presenter_label}}
+    </h4>
+    <div class="detail-value">
+        {{object.presenter}}
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{category_label}}
+    </h4>
+    <div class="detail-value">
+        {{object.get_category_display}}
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{theme_label}}
+    </h4>
+    <div class="detail-value">
+        {{object.theme}}
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{detail_label}}
+    </h4>
+    <div class="detail-value">
+        {{object.detail}}
+    </div>
+    <h4 class="mt-5 border-bottom">
+        {{status_label}}
+    </h4>
+    <div class="detail-value">
+        {% if obj.is_presented %}
+        <div class="before_presentation">
+            {{before_presentation}}
+        </div>
+        {% else %}
+        <div class="after_presentation">
+            {{after_presentation}}
+        </div>
+        {% endif %}
+    </div>
+    <a href="{% url 'app:list' %}" class="btn btn-secondary btn-sm back-btn">
+        <i class="fas fa-undo"></i>
+        {{back_btn}}
+    </a>
+{% endblock %}

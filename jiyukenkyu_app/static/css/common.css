@@ -1,0 +1,106 @@
+.container, .container-lg, .container-md, .container-sm {
+  max-width: 700px;
+}
+.offset-md-3 {
+  margin: 25px auto;
+  width: 25%;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+margin-bottom: 60px;
+}
+main {
+padding: 100px 0;
+}
+.footer {
+position: absolute;
+bottom: 0;
+width: 100%;
+height: 60px;
+background-color: #312d2a;
+}
+.container {
+width: auto;
+max-width: 680px;
+}
+.container .text-muted {
+margin: 20px 0;
+}
+
+.nav-item {
+margin: 0 auto;
+}
+.list-btn-content {
+text-align: right;
+}
+
+.table {
+margin: 0 auto;
+padding: 100px 0;
+}
+.fas {
+margin-right: 10px;
+}
+
+ul.errorlist {
+margin: 0;
+padding: 0;
+}
+.errorlist li{
+border: .1rem solid #f00;
+color: #f00;
+background: rgba(255, 0, 0, .15);
+list-style-position: inside;
+display: block;
+padding: 1rem;
+text-align: left;
+border-radius: .3rem;
+font-size: 12px;
+}
+.event-cell {
+display: flex;
+justify-content: space-evenly;
+}
+
+.list-container {
+width: 90%;
+margin: 0 auto;
+}
+.obj-count {
+text-align: right;
+margin-left: auto;
+}
+.inner-bottom {
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+}
+.link-wrap {
+text-align: right;
+}
+.del-btn-wrap {
+display: flex;
+}
+.detail-value {
+background: #f6f6f6;
+min-height: 3em;
+overflow-wrap: break-word;
+padding: 20px;
+border-radius: 10px;
+}
+.back-btn {
+  margin-top: 50px;
+}
+.delete-btn {
+  margin: 30px auto 30px auto;
+}
+.create-btn {
+  margin-left: auto;
+}
+.event-cell {
+  /* display: grid; */
+}
