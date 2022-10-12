@@ -7,7 +7,7 @@ app_name = 'app'
 
 urlpatterns = [
     # 空のURLで登録画面にリダイレクト
-    path('', RedirectView.as_view(url='create/')),
+    path('', RedirectView.as_view(url='/create/')),
     path('create/', views.Create.as_view(), name='create'),
     path('list/', views.List.as_view(), name='list'),
     path('detail/<int:pk>', views.Detail.as_view(), name='detail'),

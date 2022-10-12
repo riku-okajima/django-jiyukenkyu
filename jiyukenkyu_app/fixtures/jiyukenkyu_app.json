@@ -1,0 +1,310 @@
+[
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 1,
+        "fields": {
+            "presenter": "テスト太郎",
+            "theme": "テスト発表テーマ",
+            "category": 4,
+            "detail": "テスト発表についての概要",
+            "presented_at": "2021-01-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:49:43.246Z",
+            "updated_at": "2022-10-12T14:49:43.246Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 2,
+        "fields": {
+            "presenter": "加藤隆三",
+            "theme": "FrontEnd-BackEnd開発(BackEnd編)",
+            "category": 1,
+            "detail": "FrontEnd-BackEnd開発(BackEnd編)",
+            "presented_at": "2021-01-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:42:55.846Z",
+            "updated_at": "2022-10-12T14:42:55.846Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 3,
+        "fields": {
+            "presenter": "佐々木大地",
+            "theme": "ほうれん草について考える",
+            "category": 3,
+            "detail": "ほうれん草について考える",
+            "presented_at": "2021-01-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:44:04.888Z",
+            "updated_at": "2022-10-12T14:45:10.507Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 4,
+        "fields": {
+            "presenter": "阿部智博",
+            "theme": "ステップアップフレームワーク",
+            "category": 2,
+            "detail": "ステップアップフレームワーク",
+            "presented_at": "2021-02-26",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:45:01.140Z",
+            "updated_at": "2022-10-12T14:59:21.693Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 5,
+        "fields": {
+            "presenter": "小山・井町",
+            "theme": "KPT(ケプト)の紹介",
+            "category": 3,
+            "detail": "KPT(ケプト)の紹介",
+            "presented_at": "2021-03-26",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:47:52.225Z",
+            "updated_at": "2022-10-12T14:49:08.009Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 6,
+        "fields": {
+            "presenter": "加藤隆三",
+            "theme": "BackEnd開発(Flyway編)",
+            "category": 1,
+            "detail": "BackEnd開発(Flyway編)",
+            "presented_at": "2021-03-26",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:48:55.630Z",
+            "updated_at": "2022-10-12T14:48:55.630Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 7,
+        "fields": {
+            "presenter": "佐々木謙",
+            "theme": "RPCナレッジ TODOアプリ開発(BackEnd)",
+            "category": 1,
+            "detail": "RPCナレッジ\r\nTODOアプリ開発(BackEnd)",
+            "presented_at": "2021-04-23",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:50:21.452Z",
+            "updated_at": "2022-10-12T14:50:21.452Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 8,
+        "fields": {
+            "presenter": "加藤隆三",
+            "theme": "RPCナレッジ開発(Docker編)",
+            "category": 1,
+            "detail": "RPCナレッジ開発(Docker編)",
+            "presented_at": "2021-05-28",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:51:13.482Z",
+            "updated_at": "2022-10-12T14:51:13.482Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 9,
+        "fields": {
+            "presenter": "粕谷潤平",
+            "theme": "資料の作り方・コツ",
+            "category": 3,
+            "detail": "資料の作り方・コツについて",
+            "presented_at": "2021-06-25",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:52:40.251Z",
+            "updated_at": "2022-10-12T14:52:40.251Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 10,
+        "fields": {
+            "presenter": "一ノ瀬康司",
+            "theme": "SpringSecurity基本機能の紹介",
+            "category": 1,
+            "detail": "SpringSecurity基本機能の紹介",
+            "presented_at": "2021-07-30",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:54:06.886Z",
+            "updated_at": "2022-10-12T14:54:06.886Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 11,
+        "fields": {
+            "presenter": "佐々木大地",
+            "theme": "インターネット広告を知ろう",
+            "category": 4,
+            "detail": "インターネット広告を知ろう",
+            "presented_at": "2021-08-27",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:55:09.518Z",
+            "updated_at": "2022-10-12T14:55:09.518Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 12,
+        "fields": {
+            "presenter": "中村祐介",
+            "theme": "若手エンジニア(仮)の苦悩と飛躍",
+            "category": 2,
+            "detail": "若手エンジニア(仮)の苦悩と飛躍",
+            "presented_at": "2021-10-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:57:10.852Z",
+            "updated_at": "2022-10-12T15:00:02.017Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 13,
+        "fields": {
+            "presenter": "岡嶋陸",
+            "theme": "Python × django について",
+            "category": 1,
+            "detail": "Python × django について",
+            "presented_at": "2021-11-26",
+            "is_presented": true,
+            "created_at": "2022-10-12T14:58:55.394Z",
+            "updated_at": "2022-10-12T14:58:55.394Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 14,
+        "fields": {
+            "presenter": "加藤隆三",
+            "theme": "JamstackによるサーバレスWebサイト開発",
+            "category": 1,
+            "detail": "JamstackによるサーバレスWebサイト開発",
+            "presented_at": "2021-12-17",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:00:54.163Z",
+            "updated_at": "2022-10-12T15:00:54.163Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 15,
+        "fields": {
+            "presenter": "安原ケヴィン",
+            "theme": "Reactについて",
+            "category": 1,
+            "detail": "Reactについての説明",
+            "presented_at": "2022-01-28",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:01:51.007Z",
+            "updated_at": "2022-10-12T15:01:51.007Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 16,
+        "fields": {
+            "presenter": "佐々木大地",
+            "theme": "Webブラウザの仕組みについて",
+            "category": 1,
+            "detail": "Webブラウザの\r\n仕組みについて",
+            "presented_at": "2022-02-25",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:02:40.247Z",
+            "updated_at": "2022-10-12T15:02:40.247Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 17,
+        "fields": {
+            "presenter": "栗原俊夫",
+            "theme": "コミュニケーション",
+            "category": 2,
+            "detail": "コミュニケーションについて",
+            "presented_at": "2022-03-25",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:05:39.249Z",
+            "updated_at": "2022-10-12T15:10:44.117Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 18,
+        "fields": {
+            "presenter": "松尾淳一",
+            "theme": "勉強習慣を身につける",
+            "category": 3,
+            "detail": "勉強習慣を身につける",
+            "presented_at": "2022-04-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:06:43.806Z",
+            "updated_at": "2022-10-12T15:06:43.806Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 19,
+        "fields": {
+            "presenter": "森本大輝",
+            "theme": "リーダーのおしごと",
+            "category": 2,
+            "detail": "リーダーっていわれている奴らは会議ばっかしてっけど、\r\n実際どんなお仕事してんの",
+            "presented_at": "2022-05-27",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:08:26.459Z",
+            "updated_at": "2022-10-12T15:08:26.459Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 20,
+        "fields": {
+            "presenter": "谷口晃一",
+            "theme": "フレームワーク別 PHP環境構築スピードラン",
+            "category": 1,
+            "detail": "フレームワーク別\r\nPHP環境構築スピードラン",
+            "presented_at": "2022-06-24",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:10:30.943Z",
+            "updated_at": "2022-10-12T15:10:30.943Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 21,
+        "fields": {
+            "presenter": "粕谷潤平",
+            "theme": "私たちは買われた2020",
+            "category": 2,
+            "detail": "私たちは買われた2020",
+            "presented_at": "2022-07-22",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:11:45.526Z",
+            "updated_at": "2022-10-12T15:11:45.526Z"
+        }
+    },
+    {
+        "model": "jiyukenkyu_app.presentation",
+        "pk": 22,
+        "fields": {
+            "presenter": "岡嶋陸",
+            "theme": "TailwindCSS",
+            "category": 1,
+            "detail": "TailwindCSS ~ Utility-First CSS Framework ~",
+            "presented_at": "2022-08-26",
+            "is_presented": true,
+            "created_at": "2022-10-12T15:13:40.673Z",
+            "updated_at": "2022-10-12T15:13:40.673Z"
+        }
+    }
+]

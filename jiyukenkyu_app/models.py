@@ -1,7 +1,15 @@
+import django
 from django.db import models
+# from django.conf import settings
+# settings.configure()
+# django.setup()
 
 ''' じゆうけんきゅうモデル '''
 class Presentation(models.Model):
+    class Meta:
+        app_label = 'jiyukenkyu_app'
+        db_table = 'presentations'
+    
     CHOICES = (
         (1, '技術系'),
         (2, '業務系'),
