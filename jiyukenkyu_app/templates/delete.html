@@ -1,4 +1,4 @@
-{% extends 'common.html' %}
+{% extends "common.html" %}
 {% block content %}
 <div class="list-container">
   <a href="{% url 'app:list' %}" class="btn btn-secondary btn-sm back-btn">
@@ -9,8 +9,8 @@
     {{delete_title}}
   </h4>
   <form action="" method="POST">
-  {% csrf_token %}
-  <table class="table table-striped table-bordered">
+    {% csrf_token %}
+    <table class="table table-striped table-bordered">
       <thead>
         <tr>
           <th scope="col">{{presented_at_label}}</th>
@@ -28,16 +28,16 @@
           <td>{{ object.theme }}</td>
           <td>
             {% if object.is_presented %}
-              {{after_presentation}}
+            {{after_presentation}}
             {% else %}
-              {{before_presentation}}
+            {{before_presentation}}
             {% endif %}
           </td>
         </tr>
       </tbody>
     </table>
     <div class="del-btn-wrap">
-      <button type="submit"  class="btn btn-danger delete-btn">
+      <button type="submit" class="btn btn-danger delete-btn">
         <i class="fas fa-trash-alt"></i>
         {{delete_btn}}
       </button>

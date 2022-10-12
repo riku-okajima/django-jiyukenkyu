@@ -1,38 +1,37 @@
-{% extends 'common.html' %}
+{% extends "common.html" %}
 {% block content %}
-    <div class="container my-3">
-        <div class="list-btn-content">
-            <a href="{% url 'app:list' %}" class="btn btn-secondary btn-sm">
-                <i class="fas fa-list-ul"></i>
-                {{list_btn}}
-            </a>
-        </div>
-        <h4 class="mt-4 border-bottom">
-            {% if is_create %}  
-                {{create_title}}
-            {% elif is_update %}
-                {{update_title}}
-            {% endif %}
-        </h4>
-        <form action="" method="POST" class="form-group">
-            {% csrf_token %}
-            {{form.as_p}}
-            <div class="form-group row">
-                <div class="offset-md-3 col-md-9">
-                    {% if is_create %}
-                    <button type="submit" class="form-control btn btn-primary">
-                        <i class="fas fa-plus"></i>
-                        {{submit_btn}}
-                    </button>
-                        {% elif is_update %}
-                    <button type="submit" class="form-control btn btn-success">
-                        <i class="fas fa-check"></i>
-                        {{update_btn}}
-                    </button>
-                        {% endif %}
-                </div>
-            </div>
-        </form>
-        <span class="glyphicon glyphicon-plus"></span>
+  <div class="container my-3">
+    <div class="list-btn-content">
+      <a href="{% url 'app:list' %}" class="btn btn-secondary btn-sm">
+        <i class="fas fa-list-ul"></i>
+        {{list_btn}}
+      </a>
     </div>
+    <h4 class="mt-4 border-bottom">
+      {% if is_create %}
+        {{create_title}}
+      {% elif is_update %}
+        {{update_title}}
+      {% endif %}
+    </h4>
+    <form action="" method="POST" class="form-group">
+      {% csrf_token %}{{form.as_p}}
+      <div class="form-group row">
+        <div class="offset-md-3 col-md-9">
+          {% if is_create %}
+            <button type="submit" class="form-control btn btn-primary">
+              <i class="fas fa-plus"></i>
+              {{submit_btn}}
+            </button>
+          {% elif is_update %}
+            <button type="submit" class="form-control btn btn-success">
+              <i class="fas fa-check"></i>
+              {{update_btn}}
+            </button>
+          {% endif %}
+        </div>
+      </div>
+    </form>
+    <span class="glyphicon glyphicon-plus"></span>
+  </div>
 {% endblock %}
