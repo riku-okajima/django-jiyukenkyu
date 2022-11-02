@@ -1,4 +1,3 @@
-import datetime
 import jiyukenkyu_app.tests.setup as test_setup
 from django.test import TestCase
 from django.urls import reverse, resolve
@@ -13,8 +12,7 @@ class TestUrls(TestCase):
     # コンストラクタメソッド
     def setUp(self):
         setUp()
-        global obj_count
-        obj_count = test_setup.object_list.count()
+        self.obj_last_pk = test_setup.object_list.last().pk
 
     # 頭に必ず「test_」をつける
     def test_url_redirect(self):
@@ -42,36 +40,42 @@ class TestUrls(TestCase):
         self.assertEqual(view.func.view_class, List)
         self.assertEqual(HttpResponse.status_code, response.status_code)
 
-    def test_url_update(self):
+    def test_url_update_ok(self):
         # モデルのIDでなければならない
-        path_ok = reverse('app:update', kwargs={'pk': obj_count})
-        path_ng = reverse('app:update', kwargs={'pk': obj_count + 1})
+        path_ok = reverse('app:update', kwargs={'pk': self.obj_last_pk})
         view = resolve(path_ok)
         response_success = self.client.get(path_ok)
-        response_not_found = self.client.get(path_ng)
         
         self.assertEqual(view.func.view_class, Update)
         self.assertEqual(HttpResponse.status_code, response_success.status_code)
+        
+    def test_url_update_ng(self):
+        path_ng = reverse('app:update', kwargs={'pk': self.obj_last_pk + 1})
+        response_not_found = self.client.get(path_ng)
         self.assertEqual(HttpResponseNotFound.status_code, response_not_found.status_code)
 
-    def test_url_detail(self):
-        path_ok = reverse('app:detail', kwargs={'pk': obj_count})
-        path_ng = reverse('app:detail', kwargs={'pk': obj_count + 1})
+    def test_url_detail_ok(self):
+        path_ok = reverse('app:detail', kwargs={'pk': self.obj_last_pk})
         view = resolve(path_ok)
         response_success = self.client.get(path_ok)
-        response_not_found = self.client.get(path_ng)
         
         self.assertEqual(view.func.view_class, Detail)
         self.assertEqual(HttpResponse.status_code, response_success.status_code)
-        self.assertEqual(HttpResponseNotFound.status_code, response_not_found.status_code)
 
-    def test_url_delete(self):
-        path_ok = reverse('app:delete', kwargs={'pk': obj_count})
-        path_ng = reverse('app:delete', kwargs={'pk': obj_count + 1})
+    def test_url_detail_ng(self):
+        path_ng = reverse('app:detail', kwargs={'pk': self.obj_last_pk + 1})
+        response_not_found = self.client.get(path_ng)
+        self.assertEqual(HttpResponseNotFound.status_code, response_not_found.status_code)
+        
+    def test_url_delete_ok(self):
+        path_ok = reverse('app:delete', kwargs={'pk': self.obj_last_pk})
         view = resolve(path_ok)
         response_success = self.client.get(path_ok)
-        response_not_found = self.client.get(path_ng)
         
         self.assertEqual(view.func.view_class, Delete)
         self.assertEqual(HttpResponse.status_code, response_success.status_code)
+
+    def test_url_delete_ng(self):
+        path_ng = reverse('app:delete', kwargs={'pk': self.obj_last_pk + 1})
+        response_not_found = self.client.get(path_ng)
         self.assertEqual(HttpResponseNotFound.status_code, response_not_found.status_code)

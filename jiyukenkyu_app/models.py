@@ -29,10 +29,10 @@ class Presentation(models.Model):
     presented_at = models.DateField()
     # 発表済みフラグ
     is_presented = models.BooleanField(default=True)
-    # 作成日
+    # 作成日時
     created_at = models.DateTimeField(auto_now_add=True)
-    # 更新日
+    # 更新日時
     updated_at = models.DateTimeField(auto_now=True)
-  
+
     def __str__(self):
         return str(self.presented_at) + ':' + self.presenter
