@@ -9,7 +9,7 @@ def setUp():
     global input_data
     input_data = {
             # 発表者
-            'presenter' : '西巻邦彦',
+            'presenter' : '西○邦○',
             # カテゴリー
             'category' : '1',
             # テーマ

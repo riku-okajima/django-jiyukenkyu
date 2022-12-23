@@ -43,7 +43,7 @@ class TestModel(TestCase):
     # 日時を固定
     @freeze_time('2023-01-01 01:01:01')
     def test_model_time(self):
-        new_presenter = '山村暉'
+        new_presenter = '山村○'
         new_theme = 'しくじり先生 俺みたいな先輩になるな！'
         new_detail ='下に人を付けた際にしくじらないための授業'
         new_is_presented = False
