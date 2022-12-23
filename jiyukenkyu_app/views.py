@@ -39,7 +39,6 @@ class Create(CreateView):
         context['create_title'] = 'じゆうけんきゅうを追加する'
         context['submit_btn'] = '新規登録'
         context['is_create'] = True
-        Presentation.objects.all()
         return context
 
     def form_valid(self, form):
@@ -97,7 +96,7 @@ class Update(UpdateView):
         if obj.presented_at > today:
             obj.is_presented = False
         return super().form_valid(form)
- 
+
     def form_invalid(self, form):
         return super().form_invalid(form)
 

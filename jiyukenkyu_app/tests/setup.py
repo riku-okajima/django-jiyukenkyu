@@ -1,17 +1,21 @@
+import datetime
 from jiyukenkyu_app.models import Presentation
 
 def setUp():
+    # 一覧データ
     global object_list
-    # test_presenter='岡嶋 陸'
-    # test_theme='TailwindCSSについて'
-    # test_detail='ユーティリティファーストCSSフレームワーク'
-    # test_presented_at = datetime.date.today()
-    
-    # presentation = Presentation()
-    # presentation.presenter = test_presenter
-    # presentation.theme = test_theme
-    # presentation.detail = test_detail
-    # presentation.presented_at = test_presented_at
-    # presentation.save()
-    
-    object_list = Presentation.objects.all()
+    object_list = Presentation.objects.all().order_by('presented_at')
+    # 入力データ
+    global input_data
+    input_data = {
+            # 発表者
+            'presenter' : '西巻邦彦',
+            # カテゴリー
+            'category' : '1',
+            # テーマ
+            'theme' : 'python×機械学習で画像認識してみた',
+            # 詳細
+            'detail' : '機械学習とは？、実装の紹介、まとめ',
+            # 発表日
+            'presented_at' : datetime.date(2022, 11, 25),
+        }

@@ -22,7 +22,7 @@ class Presentation(models.Model):
     # テーマ
     theme = models.CharField(max_length=30)
     # カテゴリー
-    category = models.IntegerField(null=True, blank=True, choices=CHOICES)
+    category = models.IntegerField(choices=CHOICES, default=CHOICES[0][0])
     # 詳細
     detail = models.TextField()
     # 発表日
